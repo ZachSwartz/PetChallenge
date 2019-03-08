@@ -1,3 +1,25 @@
-﻿<? xml version="1.0" encoding="utf-8" ?>
-<configuration>
-</configuration>
+﻿using System;
+
+namespace PetChallenge
+{
+    class Pet
+    {
+        public string type;
+        public string name;
+        public string owner;
+        public double weight;
+
+        public Pet(string type, string name, string owner, double weight)
+        {
+            this.type = type;
+            this.name = name;
+            this.owner = owner;
+            this.weight = weight;
+        }
+
+        public string getTag()
+        {
+            return String.Format("If lost, call {0}", this.owner);
+        }
+    }
+}
